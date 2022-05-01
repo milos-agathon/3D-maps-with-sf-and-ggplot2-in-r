@@ -2,6 +2,6 @@
 
 This repo show you how to make a crisp 3D map of forest cover height in Brazil using satellite data
 
-🧑🏼‍💻 Check the full tutorial at https://milospopovic.net/map-rivers-with-sf-and-ggplot2-in-r/
+🧑🏼‍💻 Check the full tutorial at https://milospopovic.net/3d-maps-with-r/
 
 ![alt text](https://github.com/milos-agathon/3D-maps-with-sf-and-ggplot2-in-r/blob/main/brazil_forest_height_2019.png?raw=true)
