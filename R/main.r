@@ -82,12 +82,13 @@ get_brazil_forest_agg <- function(brazil_sf, forests, brazil_forest, brazil_ext)
 # 4. ZONAL STATISTICS
 #---------
 
-get_brazil_zonal_stats <- function(br_forest, brazil_sf, brazil_df, br_df) {
+get_brazil_zonal_stats <- function(br_forest, br_forest_clamp, brazil_sf, brazil_df, br_df) {
 
   br_forest <- get_brazil_forest_agg()
   brazil_sf <- get_brazil_sf()
 
-  brazil_df  <- exact_extract(br_forest, brazil_sf, "mean")
+  br_forest_clamp <- ifel(br_forest > 100, 0, br_forest)
+  brazil_df  <- exact_extract(br_forest_clamp, brazil_sf, "mean")
   br_df <- as.data.frame(brazil_df)
   br_df$id <- 1:max(nrow(br_df))
 
