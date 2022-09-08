@@ -3,9 +3,6 @@
 #                 Milos Popovic
 #                 2022/05/01
 ################################################################################
-
-setwd("C:/Users/milos/Downloads/forest_height_brazil")
-
 windowsFonts(georg = windowsFont('Georgia'))
 
 install.packages('terra', repos='https://rspatial.r-universe.dev')
